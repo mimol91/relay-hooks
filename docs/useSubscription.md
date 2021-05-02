@@ -23,10 +23,10 @@ const TodoList = (props) => {
   // NOTE: This will re-subscribe every render if config is not memoized. Please
   // do not pass an object defined inline.
   useSubscription(
-    useMemo(() => {
+    useMemo(() => ({
       subscription: subscriptionSpec,
       variables: {}
-    }, [])
+    }), [])
   );
 
   // ???
